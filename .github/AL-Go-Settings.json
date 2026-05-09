@@ -2,10 +2,13 @@
   "$schema": "https://raw.githubusercontent.com/lktraser/AL-Go-Actions/main/settings.schema.json",
   "type": "AppSource App",
   "templateUrl": "https://github.com/lktraser/AL-Go-AppSource@main",
-  "gitHubRunner": "self-hosted",
-  "gitHubRunnerShell": "pwsh",
+  "gitHubRunner": "ubuntu-latest",
+  "gitHubRunnerShell": "bash",
   "CICDPushBranches": ["main", "release/*", "feature/*", "staging"],
   "environments": ["Staging", "Production"],
+  "prContainers": {
+    "enabled": true
+  },
   "DeployToStaging": {
     "branches": ["staging"],
     "environmentName": "Staging",
