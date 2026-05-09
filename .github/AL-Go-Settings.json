@@ -1,6 +1,9 @@
 {
   "$schema": "https://raw.githubusercontent.com/lktraser/AL-Go-Actions/main/settings.schema.json",
   "type": "AppSource App",
+  "prContainers": {
+    "enabled": true
+  },
   "templateUrl": "https://github.com/lktraser/AL-Go-AppSource@main",
   "gitHubRunner": "self-hosted",
   "gitHubRunnerShell": "pwsh",
