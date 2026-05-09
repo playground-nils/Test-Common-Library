@@ -5,6 +5,9 @@
   "gitHubRunner": "self-hosted",
   "gitHubRunnerShell": "pwsh",
   "CICDPushBranches": ["main", "release/*", "feature/*", "staging"],
+  "prContainers": {
+    "enabled": true
+  },
   "environments": ["Staging", "Production"],
   "DeployToStaging": {
     "branches": ["staging"],
